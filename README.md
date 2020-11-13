@@ -1,0 +1,2 @@
+# NotAlone-a_mental_health_website
+Mental Health is one of the most underrated health conditions in India. People with mental illness, acute or chronic hesitate to seek any kind aid with a fear of societal pressure.  The aim of this project is to make this illness less of a taboo and provide these patients with a one stop solution in terms of resources, communication, a secret speaking corner and what not.
