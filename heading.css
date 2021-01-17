@@ -1,0 +1,140 @@
+
+:root {
+    --contrast:
+#ffc93c;
+    --bgColor:
+#092532;
+    --fontColor:#ffc93c;
+  }
+
+  #main {
+    min-height: 10vh;
+    background-color: white;
+    /* border: .5rem solid #f55064; */
+  }
+
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box {
+    padding: 0px 10px;
+    font-size: 60px;
+
+    font-family: "Poppins", sans-serif;
+    color: #f55064;
+  }
+
+  .animate-slideup {
+    margin-right: 16px;
+    transform: translateY(200px) rotate(15deg);
+    animation: slideup 2000ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+    transform-origin: top center;
+  }
+
+  @keyframes slideup {
+    0% {
+      transform: translateY(200px) rotate(20deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+
+  .fs {
+    height: 12px;
+    width: 12px;
+    background-color: #f95959;
+    margin-left: -16px;
+    margin-top: 28px;
+    opacity: 0;
+    animation: rotate-fs 2000ms cubic-bezier(0.5, 1, 0.89, 1) forwards;
+    transform-origin: center;
+  }
+
+  @keyframes rotate-fs {
+    0% {
+      transform: rotate(0deg) scale(0);
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+    100% {
+      transform: rotate(720deg);
+      opacity: 1;
+    }
+  }
+
+  .curtain {
+    position: fixed;
+    background-color: var(--contrast);
+    width: 100vw;
+    min-height: 100vh;
+    top: 0px;
+    left: 0px;
+  }
+
+  .progressBar {
+    height: 2px;
+    width: 2px;
+    background-color: var(--bgColor);
+  }
+
+  .progressGrow-animation {
+    animation: grow 2000ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+  }
+
+  @keyframes grow {
+    0% {
+      width: 0px;
+    }
+    50% {
+      width: calc(100vw - 24px);
+      height: 2px;
+    }
+    100% {
+      width: calc(100vw - 24px);
+      height: calc(100vh - 24px);
+    }
+  }
+
+  @media (max-width: 800px) {
+    .flex {
+      flex-wrap: wrap;
+    }
+    .animate {
+      margin-right: 4px;
+    }
+    .fs {
+      height: 12px;
+      width: 12px;
+      margin-top: 30px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .box {
+      font-size: 40px;
+    }
+    .main {
+      border: 5px solid #fc3c3c;
+    }
+    .animate-slideup {
+      margin-right: 6px;
+    }
+    .fs {
+      height: 10px;
+      width: 10px;
+      margin-left: -4px;
+      margin-top: 13px;
+    }
+  }
+.text
+{ margin-top: 650px;
+  margin-left:80px;
+    margin-bottom: 100px;
+}

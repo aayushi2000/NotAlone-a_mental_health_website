@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="particle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="emoji.css">
+    <link rel="stylesheet" href="heading.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8f045748b8.js" crossorigin="anonymous"></script>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--
+  <section id="home"> -->
+    <div class="navigation-wrap bg start-header start-style">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-md navbar-dark">
+
+					<a class="navbar-brand" href="#home"><img src="icon.png" alt="smile" border="0"></a>
+
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto py-4 py-md-0">
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#about us">About Us</a>
+										<a class="dropdown-item" href="#faces">How are you feeling today?</a>
+										<a class="dropdown-item" href="#help">Why seek help?</a>
+										<a class="dropdown-item" href="#contact">Contact us</a>
+									</div>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="quiz/index.html">Self Assessment</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="resources/index.html">Resources</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="vent it out/index.html">Vent-It-Out</a>
+								</li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="Lighten Up/vent.html">Lighten Up</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="talks.html">Lets Talk</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="/iwp main/index.html">Log out</a>
+                </li>
+                
+
+							</ul>
+						</div>
+
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="my-5 py-5">
+	</div>
+  <script>
+  (function($) { "use strict";
+
+	$(function() {
+		var header = $(".start-style");
+		$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+
+			if (scroll >= 10) {
+				header.removeClass('start-style').addClass("scroll-on");
+			} else {
+				header.removeClass("scroll-on").addClass('start-style');
+			}
+		});
+	});
+
+	//Animation
+
+	$(document).ready(function() {
+		$('body.hero-anime').removeClass('hero-anime');
+	});
+
+	//Menu On Hover
+
+	$('body').on('mouseenter mouseleave','.nav-item',function(e){
+			if ($(window).width() > 750) {
+				var _d=$(e.target).closest('.nav-item');_d.addClass('show');
+				setTimeout(function(){
+				_d[_d.is(':hover')?'addClass':'removeClass']('show');
+				},1);
+			}
+	});
+
+	//Switch light/dark
+
+	$("#switch").on('click', function () {
+		if ($("body").hasClass("dark")) {
+			$("body").removeClass("dark");
+			$("#switch").removeClass("switched");
+		}
+		else {
+			$("body").addClass("dark");
+			$("#switch").addClass("switched");
+		}
+	});
+
+  })(jQuery);
+  </script>
+
+  <div class="home" id="home">
+    <div class="col-lg-6 right home-left-side">
+      <h3 class="you-are-heading">You are</h3>
+        <h1 class="notalone">NotAlone</h1>
+         <p class="para-center">If you think there's no one to listen to you, we have got your back!</p><!--mi vel commodo lobortis, purus urna malesuada turpis, et fringilla tellus eros sed libero. Nam et molestie felis. Quisque placerat tempor commodo. Donec vehicula tristique eros mattis ullamcorper. Fusce tempus ante augue, vel sollicitudin risus sagittis vel. Aliquam erat volutpat. Etiam faucibus convallis dolor, sit amet consequat risus porttitor id.
+
+            Nunc dignissim sapien non risus interdum, nec pellentesque nibh consequat. Quisque volutpat erat nisl, eget egestas leo posuere a. Cras finibus, justo in laoreet hendrerit, dolor risus ultrices magna, vel sodales lectus metus vel tellus. Curabitur tempus elit at lectus convallis pulvinar. Sed malesuada dui erat, eget lobortis mi tincidunt eget. Aenean dolor sem, molestie nec erat in, pretium consectetur lorem. Cras bibendum mauris a mi rhoncus posuere. Proin malesuada, ligula nec lacinia dapibus, diam neque vehicula metus, sed ullamcorper turpis nisl vitae augue. Mauris scelerisque ex quis consectetur ornare.</p> -->
+    </div>
+    <div class="col-lg-6 left">
+        <img class="image" src="43005 [Converted].png" alt="">
+    </div>
+    <div id="electron">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+    </div>
+</div>
+      <!-- </section> -->
+
+        <!-- <section id="about-us"> -->
+
+      <!-- <div class="row"> -->
+        <div class="col-lg-5 about-us-sec" id="about us">
+            <img class="imag" src="about-us.png" alt="">
+        </div>
+        <div class="col-lg-7">
+            <h1 class="about-heading">About Us</h1>
+            <p class="para-center">Mental health is part of overall health. Just like it’s important to be informed about your health, it’s equally important to be informed about your mental health. We aim to take the best available scientific evidence in mental health and make it easy to understand and accessible for everyone.
+
+              Our team is committed to creating and delivering the highest quality mental health literacy information, research, education and resources. Our materials are provided in a variety of mediums that include videos, animations, brochures, e-books, face-to-face training programs, and online training programs. Our materials are specifically designed to meet the needs of children, youth, young adults, families, educators, community agencies and health care providers.
+              
+              And, we can’t do it without you! We continually collaborate with policy makers, educators, health care providers, community agencies and the general public.
+
+              </p>
+        </div>
+    <!-- </div> -->
+
+  <!-- </section> -->
+
+  <!-- <section id="face"> -->
+
+    <div id="faces" class="faces">
+
+        <div class="text">
+        <div class="flex" id="main"></div>
+        <p class="para-emoji">Do you feel depressed, anxious, worried about relationship issues or suicidal? Do you have a question related to your own or someone else's mental health?</p>
+    </div>
+    <div class="forleft">
+    <!-- <div class="emoji  emoji--like">
+        <div class="emoji__hand">
+            <div class="emoji__thumb"></div>
+        </div>
+      </div>
+      <div class="emoji  emoji--love">
+        <div class="emoji__heart"></div>
+      </div> -->
+      <div class="emoji  emoji--haha">
+        <div class="emoji__face">
+          <div class="emoji__eyes"></div>
+          <div class="emoji__mouth">
+            <div class="emoji__tongue"></div>
+          </div>
+        </div>
+      </div>
+      <div class="emoji  emoji--yay">
+        <div class="emoji__face">
+          <div class="emoji__eyebrows"></div>
+          <div class="emoji__mouth"></div>
+        </div>
+      </div>
+      <div class="emoji  emoji--wow">
+        <div class="emoji__face">
+          <div class="emoji__eyebrows"></div>
+          <div class="emoji__eyes"></div>
+          <div class="emoji__mouth"></div>
+        </div>
+      </div>
+      <div class="emoji  emoji--sad">
+        <div class="emoji__face">
+          <div class="emoji__eyebrows"></div>
+          <div class="emoji__eyes"></div>
+          <div class="emoji__mouth"></div>
+        </div>
+      </div>
+      <div class="emoji  emoji--angry">
+        <div class="emoji__face">
+          <div class="emoji__eyebrows"></div>
+          <div class="emoji__eyes"></div>
+          <div class="emoji__mouth"></div>
+        </div>
+      </div>
+    </div>
+     <a href="pages.html"> <button class="btn-how-feeling">Know more!</button></a>
+    </div>
+  <!-- </section> -->
+
+  <!-- <section id="help"> -->
+    <div id="help"class="help">
+
+        <div class="col-lg-6 help_des ">
+            <h1 id="why-seek-help-heading">Why Seeking Help Is Important?</h1>
+            <p style="padding:6rem;">First and foremost, getting your mental illness treated and managed will help to improve your quality of life. Living with mental illness will always be a battle, but getting the proper treatment will make it much more manageable, allowing you to enjoy everything life has to offer without your condition getting in the way.In addition to improved mental health, seeking treatment can also lead to other benefits, as well. Good mental health can also positively physical health by improving sleeping habits, the immune system and lower pain levels. Having your mental health treated can also improve your productivity, allowing you to focus on daily tasks and give you the motivation to get things done in a timely manner.Seeking treatment for mental health conditions is absolutely vital, regardless of what form of treatment you prefer. From medication to therapy to one of our clinical trials, there is a solution out there for every individual and we encourage you to find it so you can live a happier life with good mental health..</p>
+        </div>
+        <div class="one">
+            <div class="col-lg-6 help_pic">
+                <img class="image" src="why-seek-help.png" alt="">
+            </div>
+            </div>
+    </div>
+  <!-- </section> -->
+
+  <script type='text/javascript'>
+    (function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'RKjT24NGj5jGS6Edv_c', {});
+    </script>
+    
+
+</body>
+<script>
+    const loadingAnimationTime = 2000
+
+const showMainAnimation = (parent) => {
+  const boxContainer = document.createElement("div");
+  boxContainer.style.overflow = "hidden";
+  const box = document.createElement("div");
+  box.classList.add("box", "flex");
+  parent.appendChild(boxContainer);
+  boxContainer.appendChild(box);
+  const quote = ["How", "are", "You", "feeling", "Today","?"];
+  let delay = 0;
+  // Add all the words
+  for (let word in quote){
+    let text = document.createElement("span");
+    text.textContent = quote[word];
+    text.classList.add("animate-slideup");
+    delay = delay + 22;
+    text.style.animationDelay = delay + "ms";
+    box.appendChild(text);
+  }
+  const lastAnimationTime = 1000 + delay; // in ms
+  // Add full stop
+  let text = document.createElement("div");
+  text.classList.add("fs", "flex");
+  text.style.animationDelay = lastAnimationTime - 100 + "ms";
+};
+
+const revealCurtain = (parent) => {
+  const curtain = document.createElement("div");
+  curtain.classList.add("flex", "curtain");
+  parent.appendChild(curtain);
+  const progressBar = document.createElement("div");
+  progressBar.classList.add("progressBar");
+  curtain.appendChild(progressBar);
+  progressBar.classList.add("progressGrow-animation");
+  return curtain;
+};
+
+const init = () => {
+  const container = document.getElementById("main");
+  const curtain = revealCurtain(container);
+  setTimeout(() => {
+    container.removeChild(curtain);
+    showMainAnimation(container);
+  }, loadingAnimationTime + 100)
+};
+
+init();
+
+</script>
+<footer id="contact" class="footer">
+  <div class="container">
+      <div class="row">
+
+          <div class="col-12 col-sm-6 footer-joinus">
+              <span class="footer-joinus-text">Have something to post or suggest?</span>
+              <a class="footer-joinus_button" href="">Mail us</a>
+          </div>
+          <div class="col-12 col-sm-6 align-self-center ">
+              <div class="text-center social">
+                  <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-instagram fa-lg"></i></a>
+                  <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-phone"></i></a>
+              </div>
+          </div>
+     </div>
+     <div class="row justify-content-center" style="margin-top: 10px;">
+          <div class="col-auto copytext">
+          </div>
+     </div>
+  </div>
+</footer>
+
+</html>

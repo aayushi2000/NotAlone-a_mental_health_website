@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lighten up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="ventitout.css" type="text/css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="navbar.css">
+
+  </head>
+
+  <body onclick="character();">
+    <canvas id="canvas"></canvas>
+
+
+    <!-- navbar -->
+    <div class="navigation-wrap bg start-header start-style">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-md navbar-dark">
+
+          <a class="navbar-brand" href="/iwp main/login/home1/index.html"><img src="icon.png" alt="smile" border="0"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto py-4 py-md-0">
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/iwp main/login/home1/index.html" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/iwp main/login/home1/quiz/index.html">Self Assessment</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/iwp main/login/home1/resources/index.html">Resources</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/iwp main/login/home1/vent it out/index.html">Vent-It-Out</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="">Lighten Up</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/iwp main/index.html">log out</a>
+                </li>
+
+              </ul>
+            </div>
+
+          </nav>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+
+    <script>
+    window.onload = function()
+    {
+      //canvas init
+      var browser = document.getElementById("canvas");
+      var ctx = browser.getContext("2d");
+
+      //canvas dimensions
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      browser.width = w;
+      browser.height = h;
+
+      //snow particles values
+      var num = 80;
+      var snow = []; // 4 objects/array
+      for (var i = 0; i < num; i++)
+      {
+        snow.push({
+          x: Math.random() * w, //x-coor
+          y: Math.random() * h, //y-coor
+          r: Math.random() * 4 + 1, //radius
+          d: Math.random() * num //density
+        })
+      }
+      //draw particles
+      function draw()
+      {
+        ctx.clearRect(0, 0, w, h);
+        //ctx.beginPath();
+        c = Math.floor(num / 3);
+        for (var i = 0; i < num; i++)
+        {
+          var par = snow[i];
+          ctx.beginPath();
+          ctx.moveTo(par.x, par.y);
+          ctx.arc(par.x, par.y, par.r, 0, 2 * Math.PI, true);
+          if (i <= c)
+          {
+            ctx.fillStyle = "#fffafa";
+            ctx.fill();
+          }
+          if (i > c && i < 2 * c)
+          {
+            ctx.fillStyle = "#ddddFF";
+            ctx.fill();
+          }
+          if (i > 2 * c)
+          {
+            ctx.fillStyle = "#ccccDD";
+            ctx.fill();
+          }
+        }
+        update();
+      }
+      //moving particles
+      var angle = 0;
+      function update()
+      {
+        angle += 0.01;
+        for (var i = 0; i < snow.length; i++)
+        {
+          var par = snow[i];
+          par.x += Math.sin(angle) * 0.7;
+          par.y += Math.cos(angle + par.d) * 1.2 + 1 + par.r / 4;
+
+          if (par.x > w + 5 || par.x < -5 || par.y > h)
+          {
+            if (i % 4 > 0)
+            {
+              //66.67% of the flakes
+              snow[i] = { x: Math.random() * w, y: -28, r: par.r, d: par.d };
+            }
+            else
+            {
+              //If the flake is exitting from the right
+              if (Math.sin(angle) > 0)
+              {
+                //Enter from the left
+                snow[i] = { x: -6, y: Math.random() * h, r: par.r, d: par.d };
+              }
+              else
+              {
+                //Enter from the right
+                snow[i] = { x: w + 8, y: Math.random() * h, r: par.r, d: par.d };
+              }
+            }
+          }
+        }
+      }
+      //loop animtion
+      setInterval(draw, 35);
+    }
+   /******************************************************************************************************************/
+    number = 0;
+    var animations = ['https://image.ibb.co/epha5A/giphy.gif','https://image.ibb.co/epha5A/giphy.gif','https://image.ibb.co/epha5A/giphy.gif'];
+    var refreshIntervalId = setInterval(function()
+    {
+      image = document.getElementById('hiddenimageid');
+      image.src = animations[number];
+    },1)
+
+    function character()
+    {
+      clearInterval(refreshIntervalId);
+      image = document.getElementById('hiddenimageid');
+      image.src = animations[number];
+      console.log(number);
+      number++;
+    }
+
+    </script>
+
+    <br>
+    <div>
+      <p align="center" class="heading">Lighten-up Your Mood! </p>
+      <p class="text" style="  margin-top: 50px;">Have trouble concentrating? Or just need a break?</p>
+      <p class="text" >Here we have for you the best of mood lightening songs!!</p>
+    </div><br>
+
+    <div style="margin-top:20%; margin-left: 40%; position: fixed;">
+      <audio id="myAudio" controls loop >
+        <source src="bts.mp3" type="audio/mpeg">
+        <source src="dontstartnow.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <!--<button onclick="playAudio()" type="button">Play Audio</button>
+      <button onclick="pauseAudio()" type="button">Pause Audio</button>
+      <button onclick="playnext()" type="button">Play Next Audio</button> -->
+
+
+    </div>
+
+    <div class="board">
+      <img src="" id="hiddenimageid" />
+    </div>
+  </body>
+</html>

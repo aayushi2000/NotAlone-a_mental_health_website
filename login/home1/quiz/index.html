@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Togetherwearestron</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="navbar.css">
+
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8f045748b8.js" crossorigin="anonymous"></script>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+</style>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- navbar -->
+
+
+    <div class="navigation-wrap bg start-header start-style">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-md navbar-dark">
+
+          <a class="navbar-brand" href="/iwp main/login/home1/index.html"><img src="icon.png" alt="smile" border="0"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto py-4 py-md-0">
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/iwp main/login/home1/index.html" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="">Self Assessment</a>
+                </li>
+                
+
+              </ul>
+            </div>
+
+          </nav>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="my-5 py-5">
+    </div>
+
+    <script>
+
+(function($) { "use strict";
+
+$(function() {
+  var header = $(".start-style");
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 10) {
+      header.removeClass('start-style').addClass("scroll-on");
+    } else {
+      header.removeClass("scroll-on").addClass('start-style');
+    }
+  });
+});
+
+//Animation
+
+$(document).ready(function() {
+  $('body.hero-anime').removeClass('hero-anime');
+});
+
+//Menu On Hover
+
+$('body').on('mouseenter mouseleave','.nav-item',function(e){
+    if ($(window).width() > 750) {
+      var _d=$(e.target).closest('.nav-item');_d.addClass('show');
+      setTimeout(function(){
+      _d[_d.is(':hover')?'addClass':'removeClass']('show');
+      },1);
+    }
+});
+
+//Switch light/dark
+
+$("#switch").on('click', function () {
+  if ($("body").hasClass("dark")) {
+    $("body").removeClass("dark");
+    $("#switch").removeClass("switched");
+  }
+  else {
+    $("body").addClass("dark");
+    $("#switch").addClass("switched");
+  }
+});
+
+})(jQuery);
+    </script>
+
+    <div id="assessment">
+      <h1 class="quiz-h1">Assess Your Regular Moods</h1>
+      <h4 class= "quiz-h4">and see what they have to tell about your mental health!</h1>
+    <div >
+      <img class="image" src="https://i.ibb.co/kHcZ6WD/quiz.jpg" alt="quiz" border="0"></a>
+      </div>
+
+    <div id="main">
+
+
+
+      <!-- <h5 class="quiz-h4">It is always worth it to keep a check on yourself regularly... :)</h5> -->
+
+
+        <div class="grid">
+            <div id="quiz">
+                <h1>Choose one from the options.</h1>
+                <hr style="margin-bottom: 20px">
+
+                <p id="question"></p>
+
+                <div class="buttons">
+                    <button id="btn0"><span id="choice0"></span></button>
+                    <button id="btn1"><span id="choice1"></span></button>
+                    <button id="btn2"><span id="choice2"></span></button>
+                    <button id="btn3"><span id="choice3"></span></button>
+                </div>
+
+                <hr style="margin-top: 15px">
+                <footer>
+                    <p id="progress">Question x of y</p>
+                    <br>
+                </footer>
+            </div>
+        </div>
+      </div>
+      </div>
+    <script src="question.js"></script>
+
+    </body>
+    </html>

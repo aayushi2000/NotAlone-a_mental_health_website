@@ -1,0 +1,58 @@
+
+.heading
+{
+  font-family: 'Volkhov', serif;
+  color:   #092532;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 40px;
+}
+.text{
+  text-align: center;
+  font-family: 'Volkhov', serif;
+  color:   #092532;
+  font-size: 16px;
+
+  text-decoration: none;
+}
+input[type=submit]
+{
+  background-color: #2ea70c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+body, html, p
+{
+  height: 100%;
+  margin: 0;
+}
+
+body
+{
+  background-color: lightblue;
+  background-image: url("img.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+canvas
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+form
+{
+  position: sticky;
+  align: center;
+}
